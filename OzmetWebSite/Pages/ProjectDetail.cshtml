@@ -1,0 +1,228 @@
+﻿@page "/project/{id}"
+@model ProjectDetailModel
+@{
+    ViewData["Title"] = Model.ProjectTitle + " - Proje Detayı";
+}
+
+<!-- Project Detail Hero -->
+<section class="project-detail-hero">
+    <div class="project-hero-overlay"></div>
+    <div class="project-hero-image" style="background-image: url('@Model.MainImage')"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb" class="mb-4">
+                    <ol class="breadcrumb bg-transparent">
+                        <li class="breadcrumb-item">
+                            <a href="/" class="text-white text-decoration-none">
+                                <i class="fas fa-home me-1"></i>Ana Sayfa
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="/#projects" class="text-white text-decoration-none">Projelerimiz</a>
+                        </li>
+                        <li class="breadcrumb-item active text-warning">@Model.ProjectTitle</li>
+                    </ol>
+                </nav>
+
+                <div class="project-hero-content text-white" data-aos="fade-up">
+                    <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3">@Model.Category</span>
+                    <h1 class="display-4 fw-bold mb-3">@Model.ProjectTitle</h1>
+                    <p class="lead mb-4">@Model.ShortDescription</p>
+                    <div class="project-meta d-flex flex-wrap gap-4">
+                        <div class="meta-item">
+                            <i class="fas fa-map-marker-alt text-warning me-2"></i>
+                            <strong>Konum:</strong> @Model.Location
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-calendar text-warning me-2"></i>
+                            <strong>Tamamlanma:</strong> @Model.CompletionDate
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-ruler-combined text-warning me-2"></i>
+                            <strong>Alan:</strong> @Model.Area
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Details Content -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Main Content -->
+            <div class="col-lg-8">
+                <!-- Project Description -->
+                <div class="project-section mb-5" data-aos="fade-up">
+                    <h2 class="section-title mb-4">
+                        <span class="text-warning">Proje</span> Hakkında
+                    </h2>
+                    <div class="content-box p-4 bg-light rounded">
+                        <p class="lead mb-3">@Model.Description</p>
+                        <p>@Model.DetailedDescription</p>
+                    </div>
+                </div>
+
+                <!-- Project Gallery -->
+                <div class="project-section mb-5" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="section-title mb-4">
+                        <span class="text-warning">Proje</span> Galerisi
+                    </h2>
+                    <div class="row g-3">
+                        @if (Model.GalleryImages != null && Model.GalleryImages.Any())
+                        {
+                            @foreach (var image in Model.GalleryImages)
+                            {
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="gallery-item">
+                                        <img src="@image" alt="@Model.ProjectTitle Galeri"
+                                             class="img-fluid rounded shadow gallery-image"
+                                             data-bs-toggle="modal"
+                                             data-bs-target="#imageModal"
+                                             data-bs-image="@image">
+                                        <div class="gallery-overlay">
+                                            <i class="fas fa-expand-arrows-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+
+                <!-- Technical Specifications -->
+                <div class="project-section mb-5" data-aos="fade-up" data-aos-delay="200">
+                    <h2 class="section-title mb-4">
+                        <span class="text-warning">Teknik</span> Özellikler
+                    </h2>
+                    <div class="content-box p-4 bg-light rounded">
+                        <div class="row g-4">
+                            @if (Model.TechnicalSpecs != null && Model.TechnicalSpecs.Any())
+                            {
+                                @foreach (var spec in Model.TechnicalSpecs)
+                                {
+                                    <div class="col-md-6">
+                                        <div class="spec-item">
+                                            <strong class="text-warning">@spec.Key:</strong>
+                                            <span>@spec.Value</span>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Timeline -->
+                <div class="project-section mb-5" data-aos="fade-up" data-aos-delay="300">
+                    <h2 class="section-title mb-4">
+                        <span class="text-warning">Proje</span> Süreci
+                    </h2>
+                    <div class="timeline">
+                        @if (Model.ProjectPhases != null && Model.ProjectPhases.Any())
+                        {
+                            @foreach (var phase in Model.ProjectPhases)
+                            {
+                                <div class="timeline-item">
+                                    <div class="timeline-marker bg-warning"></div>
+                                    <div class="timeline-content bg-light p-4 rounded">
+                                        <h5 class="fw-bold text-warning mb-2">@phase.Title</h5>
+                                        <p class="text-muted small mb-2">@phase.Duration</p>
+                                        <p class="mb-0">@phase.Description</p>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Project Info Card -->
+                <div class="project-info-card bg-white p-4 rounded shadow mb-4" data-aos="fade-left">
+                    <h4 class="fw-bold mb-4 text-warning">Proje Bilgileri</h4>
+                    <div class="info-list">
+                        <div class="info-item mb-3">
+                            <strong>Müşteri:</strong>
+                            <span>@Model.Client</span>
+                        </div>
+                        <div class="info-item mb-3">
+                            <strong>Proje Türü:</strong>
+                            <span>@Model.ProjectType</span>
+                        </div>
+                        <div class="info-item mb-3">
+                            <strong>Başlangıç Tarihi:</strong>
+                            <span>@Model.StartDate</span>
+                        </div>
+                        <div class="info-item mb-3">
+                            <strong>Bitiş Tarihi:</strong>
+                            <span>@Model.CompletionDate</span>
+                        </div>
+                        <div class="info-item mb-3">
+                            <strong>Proje Değeri:</strong>
+                            <span class="text-warning fw-bold">@Model.ProjectValue</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Card -->
+                <div class="contact-card bg-warning p-4 rounded shadow mb-4" data-aos="fade-left" data-aos-delay="100">
+                    <h5 class="fw-bold mb-3 text-dark">Benzer Bir Proje Mi İstiyorsunuz?</h5>
+                    <p class="text-dark mb-3">Uzman ekibimizle hayallerinizdeki projeyi gerçeğe dönüştürün.</p>
+                    <a href="/#contact" class="btn btn-dark btn-lg w-100">
+                        <i class="fas fa-phone me-2"></i>Ücretsiz Keşif İsteyin
+                    </a>
+                </div>
+
+                <!-- Related Services -->
+                <div class="related-services bg-light p-4 rounded shadow" data-aos="fade-left" data-aos-delay="200">
+                    <h5 class="fw-bold mb-3">İlgili Hizmetlerimiz</h5>
+                    <div class="service-links">
+                        <a href="/#services" class="service-link d-block p-3 mb-2 bg-white rounded text-decoration-none">
+                            <i class="fas fa-home text-warning me-2"></i>
+                            <span>Konut İnşaatı</span>
+                        </a>
+                        <a href="/#services" class="service-link d-block p-3 mb-2 bg-white rounded text-decoration-none">
+                            <i class="fas fa-building text-warning me-2"></i>
+                            <span>Ticari İnşaat</span>
+                        </a>
+                        <a href="/#services" class="service-link d-block p-3 bg-white rounded text-decoration-none">
+                            <i class="fas fa-tools text-warning me-2"></i>
+                            <span>Tadilat & Renovasyon</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="" alt="Proje Görsel" class="img-fluid rounded" id="modalImage">
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Gallery modal functionality
+        document.querySelectorAll('.gallery-image').forEach(img => {
+            img.addEventListener('click', function() {
+                const imageSrc = this.getAttribute('data-bs-image');
+                document.getElementById('modalImage').src = imageSrc;
+            });
+        });
+    </script>
+}

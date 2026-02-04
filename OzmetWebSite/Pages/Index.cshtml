@@ -1,0 +1,446 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h1 class="hero-title text-white display-3 fw-bold mb-4">
+                    Hayallerinizi <span class="text-warning">Gerçeğe</span> Dönüştürüyoruz
+                </h1>
+                <p class="hero-subtitle text-white-50 lead mb-4">
+                    50 yıllık deneyimimizle kaliteli, güvenilir ve modern inşaat hizmetleri sunuyoruz.
+                    Projelerinizi zamanında ve mükemmel kalitede teslim ediyoruz.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-warning btn-lg me-3 px-5 py-3">
+                        <i class="fas fa-eye me-2"></i>Projelerimizi İncele
+                    </a>
+                    <a href="#contact" class="btn btn-outline-light btn-lg px-5 py-3">
+                        <i class="fas fa-phone me-2"></i>Bize Ulaşın
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                         alt="Modern İnşaat" class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <a href="#about" class="text-white">
+            <i class="fas fa-chevron-down fa-2x animate-bounce"></i>
+        </a>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section py-5 bg-warning">
+    <div class="container">
+        <div class="row text-center text-white">
+            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-item">
+                    <i class="fas fa-building fa-3x mb-3"></i>
+                    <h3 class="counter-number fw-bold" data-target="1000">0</h3>
+                    <p class="mb-0">Tamamlanan Proje</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-item">
+                    <i class="fas fa-users fa-3x mb-3"></i>
+                    <h3 class="counter-number fw-bold" data-target="2000">0</h3>
+                    <p class="mb-0">Mutlu Müşteri</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-item">
+                    <i class="fas fa-calendar fa-3x mb-3"></i>
+                    <h3 class="counter-number fw-bold" data-target="50">0</h3>
+                    <p class="mb-0">Yıllık Deneyim</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="stat-item">
+                    <i class="fas fa-award fa-3x mb-3"></i>
+                    <h3 class="counter-number fw-bold" data-target="15">0</h3>
+                    <p class="mb-0">Ödül & Sertifika</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                <div class="about-images">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                         alt="İnşaat Ekibi" class="img-fluid rounded shadow main-image">
+                    <div class="floating-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                             alt="Modern Bina" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="section-header mb-4">
+                    <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3">Hakkımızda</span>
+                    <h2 class="display-5 fw-bold mb-4">50 Yıllık Deneyim ile <span class="text-warning">Güvenilir İnşaat</span></h2>
+                    <p class="lead text-muted mb-4">
+                        ÖZMET İnşaat olarak, 1975 yılından bu yana sektörde edindiğimiz deneyim ve uzmanlıkla
+                        müşterilerimize en kaliteli hizmeti sunmaktayız.
+                    </p>
+                </div>
+
+                <div class="feature-list">
+                    <div class="feature-item mb-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="d-flex align-items-center">
+                            <div class="feature-icon bg-warning text-white rounded-circle me-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1 fw-bold">Kaliteli Malzeme</h6>
+                                <p class="mb-0 text-muted">En kaliteli malzemeler ile uzun ömürlü yapılar</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-item mb-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="d-flex align-items-center">
+                            <div class="feature-icon bg-warning text-white rounded-circle me-3">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1 fw-bold">Zamanında Teslimat</h6>
+                                <p class="mb-0 text-muted">Belirlenen sürede eksiksiz proje teslimi</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-item mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="d-flex align-items-center">
+                            <div class="feature-icon bg-warning text-white rounded-circle me-3">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1 fw-bold">Güvence & Garanti</h6>
+                                <p class="mb-0 text-muted">Tüm işlerimizde uzun süreli garanti</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="/About" class="btn btn-warning btn-lg px-4 py-3" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-info-circle me-2"></i>Hakkımızda
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3">Hizmetlerimiz</span>
+            <h2 class="display-5 fw-bold mb-4">Sunduğumuz <span class="text-warning">Hizmetler</span></h2>
+            <p class="lead text-muted">Konuttan ticariye kadar her türlü inşaat projesinde uzman çözümler</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card h-100">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                         alt="Konut İnşaatı" class="service-image">
+                    <div class="service-content">
+                        <h5 class="fw-bold mb-3">Konut İnşaatı</h5>
+                        <p class="text-muted mb-3">Modern tasarım anlayışı ile hayallerinizdeki evi inşa ediyoruz. Kaliteli malzeme ve deneyimli ekibimizle...</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-warning me-2"></i>Villa İnşaatı</li>
+                            <li><i class="fas fa-check text-warning me-2"></i>Apartman İnşaatı</li>
+                            <li><i class="fas fa-check text-warning me-2"></i>Rezidans Projeleri</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card h-100">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                         alt="Ticari İnşaat" class="service-image">
+                    <div class="service-content">
+                        <h5 class="fw-bold mb-3">Ticari İnşaat</h5>
+                        <p class="text-muted mb-3">İş merkezleri, ofis binaları ve ticari yapılar için profesyonel çözümler sunuyoruz...</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-warning me-2"></i>Ofis Binaları</li>
+                            <li><i class="fas fa-check text-warning me-2"></i>AVM & Mağazalar</li>
+                            <li><i class="fas fa-check text-warning me-2"></i>Endüstriyel Tesisler</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card h-100">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                         alt="Renovasyon" class="service-image">
+                    <div class="service-content">
+                        <h5 class="fw-bold mb-3">Tadilat & Renovasyon</h5>
+                        <p class="text-muted mb-3">Mevcut yapılarınızı modern ve fonksiyonel hale getiriyoruz. Detaylı planlama ile...</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-warning me-2"></i>İç Mekan Tasarımı</li>
+                            <li><i class="fas fa-check text-warning me-2"></i>Dış Cephe Yenileme</li>
+                            <li><i class="fas fa-check text-warning me-2"></i>Restorasyon</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3">Projelerimiz</span>
+            <h2 class="display-5 fw-bold mb-4">Tamamlanan <span class="text-warning">Projelerimiz</span></h2>
+            <p class="lead text-muted">Son dönemde tamamladığımız başarılı projelerden örnekler</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                             alt="Modern Villa Projesi" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h5 class="text-white fw-bold">Modern Villa Projesi</h5>
+                                <p class="text-white-50">Beykoz, İstanbul</p>
+                                <a href="/project/modern-villa" class="btn btn-warning btn-sm">
+                                    <i class="fas fa-eye me-1"></i>Detay
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                             alt="İş Merkezi Projesi" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h5 class="text-white fw-bold">İş Merkezi Projesi</h5>
+                                <p class="text-white-50">Levent, İstanbul</p>
+                                <a href="/project/is-merkezi" class="btn btn-warning btn-sm">
+                                    <i class="fas fa-eye me-1"></i>Detay
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                             alt="Rezidans Projesi" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h5 class="text-white fw-bold">Rezidans Projesi</h5>
+                                <p class="text-white-50">Kadıköy, İstanbul</p>
+                                <a href="/project/rezidans" class="btn btn-warning btn-sm">
+                                    <i class="fas fa-eye me-1"></i>Detay
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3">Ekibimiz</span>
+            <h2 class="display-5 fw-bold mb-4">Uzman <span class="text-warning">Ekibimiz</span></h2>
+            <p class="lead text-muted">Deneyimli ve uzman kadromuzla her projede mükemmellik</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="team-card text-center">
+                    <div class="team-image">
+                        <img src="~/images/mert.jpg"
+                             alt="Mehmet Özkan" class="img-fluid rounded-circle">
+                    </div>
+                    <div class="team-info">
+                        <h5 class="fw-bold mb-1">Mert KAMİLOĞLU</h5>
+                        <p class="text-warning mb-2">Genel Müdür</p>
+                        <p class="text-muted small">20 yıllık deneyime sahip inşaat mühendisi</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="team-card text-center">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                             alt="Ali Demir" class="img-fluid rounded-circle">
+                    </div>
+                    <div class="team-info">
+                        <h5 class="fw-bold mb-1">Ali Demir</h5>
+                        <p class="text-warning mb-2">Proje Müdürü</p>
+                        <p class="text-muted small">Mimar ve proje yönetimi uzmanı</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="team-card text-center">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b789?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                             alt="Ayşe Kaya" class="img-fluid rounded-circle">
+                    </div>
+                    <div class="team-info">
+                        <h5 class="fw-bold mb-1">Ayşe Kaya</h5>
+                        <p class="text-warning mb-2">İç Mimar</p>
+                        <p class="text-muted small">Modern tasarım ve dekorasyon uzmanı</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="team-card text-center">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                             alt="Emre Yılmaz" class="img-fluid rounded-circle">
+                    </div>
+                    <div class="team-info">
+                        <h5 class="fw-bold mb-1">Emre Yılmaz</h5>
+                        <p class="text-warning mb-2">Şantiye Şefi</p>
+                        <p class="text-muted small">15 yıllık saha deneyimi ve ekip yönetimi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-dark text-white">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3">İletişim</span>
+            <h2 class="display-5 fw-bold mb-4">Bizimle <span class="text-warning">İletişime Geçin</span></h2>
+            <p class="lead text-white-50">Projeleriniz için ücretsiz keşif ve danışmanlık hizmeti</p>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-lg-8" data-aos="fade-right">
+                <div class="contact-form bg-white p-5 rounded shadow">
+                    <h4 class="text-dark mb-4">Ücretsiz Keşif Talep Edin</h4>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label text-dark">Ad Soyad *</label>
+                                <input type="text" class="form-control form-control-lg" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label text-dark">Telefon *</label>
+                                <input type="tel" class="form-control form-control-lg" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label text-dark">E-posta</label>
+                                <input type="email" class="form-control form-control-lg">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label text-dark">Proje Detayları</label>
+                                <textarea class="form-control" rows="4" placeholder="Projeniz hakkında detaylar..."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-warning btn-lg px-5 py-3 w-100">
+                                    <i class="fas fa-paper-plane me-2"></i>Keşif Talebini Gönder
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-left">
+                <div class="contact-info">
+                    <div class="contact-item mb-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="contact-icon bg-warning text-dark rounded-circle me-3">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h5 class="mb-0">Adresimiz</h5>
+                        </div>
+                        <p class="text-white-50 ms-5">
+                            Gümüşsuyu Mah. Avhan Sok. No:10<br>
+                            Beykoz / İstanbul, Türkiye
+                        </p>
+                    </div>
+
+                    <div class="contact-item mb-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="contact-icon bg-warning text-dark rounded-circle me-3">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h5 class="mb-0">Telefon</h5>
+                        </div>
+                        <p class="text-white-50 ms-5">
+                            +90 (538) 580 38 32
+                        </p>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="contact-icon bg-warning text-dark rounded-circle me-3">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h5 class="mb-0">E-posta</h5>
+                        </div>
+                        <p class="text-white-50 ms-5">
+                            info@ozmetinsaat.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WhatsApp Float Button -->
+<div class="whatsapp-float">
+    <a href="https://wa.me/905385803832" target="_blank" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
